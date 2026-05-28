@@ -1,4 +1,4 @@
-```php
+```php id="f7d2qm"
 <?php
 
 include 'app/functions.php';
@@ -91,9 +91,9 @@ foreach ($channels as $channel) {
 
     echo "#KODIPROP:inputstream.adaptive.manifest_type=mpd\n";
 
-    echo "#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha\n";
+    echo "#KODIPROP:inputstream.adaptive.license_type=clearkey\n";
 
-    echo "#KODIPROP:inputstream.adaptive.license_key={$license_url}|Content-Type=application/octet-stream|R{SSM}|\n";
+    echo "#KODIPROP:inputstream.adaptive.license_key={$license_url}\n";
 
     echo "#KODIPROP:inputstream.adaptive.license_flags=persistent_storage\n";
 
@@ -106,6 +106,4 @@ foreach ($channels as $channel) {
 
 ?>
 ```
-
-
 
