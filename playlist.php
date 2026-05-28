@@ -91,24 +91,21 @@ foreach ($channels as $channel) {
 
     echo "#KODIPROP:inputstream.adaptive.manifest_type=mpd\n";
 
-    echo "#KODIPROP:inputstream.adaptive.license_type=clearkey\n";
+    echo "#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha\n";
 
-    echo "#KODIPROP:inputstream.adaptive.license_key={$license_url}\n";
+    echo "#KODIPROP:inputstream.adaptive.license_key={$license_url}|Content-Type=application/octet-stream|R{SSM}|\n";
 
     echo "#KODIPROP:inputstream.adaptive.license_flags=persistent_storage\n";
 
     echo "#EXTVLCOPT:http-user-agent=Mozilla/5.0\n";
 
-    echo "#EXTHTTP:{" .
-        "\"User-Agent\":\"Mozilla/5.0\"," .
-        "\"Origin\":\"https://watch.tataplay.com\"," .
-        "\"Referer\":\"https://watch.tataplay.com/\"" .
-        "}\n";
+    echo "#EXTHTTP:{\"User-Agent\":\"Mozilla/5.0\",\"Origin\":\"https://watch.tataplay.com\",\"Referer\":\"https://watch.tataplay.com/\"}\n";
 
     echo "{$channel_live}\n\n";
 }
 
 ?>
 ```
+
 
 
