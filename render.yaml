@@ -1,7 +1,6 @@
-```yaml id="ozjlwm"
 services:
-  - type: web
-    name: bybyplay
-    env: docker
-    plan: free
-```
+
+* type: web
+  name: bybyplay
+  env: docker
+  plan: free
